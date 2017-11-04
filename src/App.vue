@@ -1,13 +1,41 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <router-view/>
+    <customer-list v-bind:customers="customers"></customer-list>
+    <!--<router-view/>-->
   </div>
 </template>
 
 <script>
+
+import CustomerList from './components/CustomerList';
+
 export default {
   name: 'app',
+  components: {
+    CustomerList,
+  },
+  data() {
+    return {
+      customers: [{
+        date: '2016-05-03',
+        name: 'Tom 2',
+        address: 'No. 189, Grove St, Los Angeles',
+      }, {
+        date: '2016-05-02',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles',
+      }, {
+        date: '2016-05-04',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles',
+      }, {
+        date: '2016-05-01',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles',
+      }],
+    };
+  },
 };
 </script>
 
