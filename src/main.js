@@ -5,6 +5,7 @@ import Element from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './App';
 import router from './router';
+import '../semantic/dist/semantic.css';
 
 Vue.prototype.$ELEMENT = { size: 'medium' };
 Vue.use(Element);

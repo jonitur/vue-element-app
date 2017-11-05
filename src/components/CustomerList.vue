@@ -1,34 +1,52 @@
 <template>
   <div>
-    <el-table
-        :data="customers"
-        border
-        style="width: 100%">
-        <el-table-column
-          prop="date"
-          label="Date"
-          width="180">
-        </el-table-column>
-        <el-table-column
-          prop="name"
-          label="Name"
-          width="180">
-        </el-table-column>
-        <el-table-column
-          prop="address"
-          label="Address">
-        </el-table-column>
-      </el-table>
-
-      <!-- <customer v-for='customer in customers' v-bind:todo='customer'></customer> -->
+    <table class="ui selectable celled table">
+      <thead >
+        <tr>
+          <th>Customer</th>
+          <th>Address</th>
+          <th>Total</th>
+          <th>Ordered</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr is='customer' v-for='customer in customers' :customer="customer"></tr>
+      </tbody>
+      <tfoot>
+        <tr><th colspan="4">
+          <div class="ui right floated pagination menu">
+            <a class="icon item">
+              <i class="left chevron icon"></i>
+            </a>
+            <a class="item">1</a>
+            <a class="item">2</a>
+            <a class="item">3</a>
+            <a class="item">4</a>
+            <a class="icon item">
+              <i class="right chevron icon"></i>
+            </a>
+          </div>
+        </th>
+      </tr></tfoot>
+    </table>
+    <!-- <customer v-for='customer in customers' v-bind:todo='customer'></customer> -->
   </div>
 
 </template>
 
 <script type='text/javascript'>
 
+import Customer from './Customer';
+
 export default {
   props: ['customers'],
+  mounted: () => {
+  },
+  components: {
+    Customer,
+  },
+  methods: {
+  }
 };
 </script>
 

@@ -13,3 +13,10 @@ export default new Router({
     },
   ],
 });
+
+window.addEventListener('load', (event) => {
+  //const $jq1 = JQuery.noConflict();
+  console.log('All resources finished loading!');
+  console.log(event);
+  //$('table').tablesort();
+});

@@ -19,24 +19,25 @@ export default {
     return {
       customers: [{
         date: '2016-05-03',
-        name: 'Tom 2',
+        name: 'Tom',
         address: 'No. 189, Grove St, Los Angeles',
       }, {
         date: '2016-05-02',
-        name: 'Tom',
+        name: 'Jack',
         address: 'No. 189, Grove St, Los Angeles',
       }, {
         date: '2016-05-04',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles',
+        name: 'Jill',
+        address: 'No. 187, Grove St, Los Angeles',
       }, {
         date: '2016-05-01',
-        name: 'Tom',
+        name: 'Harry',
         address: 'No. 189, Grove St, Los Angeles',
       }],
     };
   },
 };
+
 </script>
 
 <style>
