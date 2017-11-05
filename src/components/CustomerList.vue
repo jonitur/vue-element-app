@@ -1,6 +1,6 @@
 <template>
   <div>
-    <table class="ui selectable celled table">
+    <table class="ui selectable basic table">
       <thead >
         <tr>
           <th>Customer</th>
@@ -12,6 +12,7 @@
       <tbody>
         <tr is='customer' v-for='customer in customers' :customer="customer"></tr>
       </tbody>
+      <!--
       <tfoot>
         <tr><th colspan="4">
           <div class="ui right floated pagination menu">
@@ -27,7 +28,7 @@
             </a>
           </div>
         </th>
-      </tr></tfoot>
+      </tr></tfoot>-->
     </table>
     <!-- <customer v-for='customer in customers' v-bind:todo='customer'></customer> -->
   </div>

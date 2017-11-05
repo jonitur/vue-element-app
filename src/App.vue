@@ -1,7 +1,14 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <customer-list v-bind:customers="customers"></customer-list>
+    <!--<img src="./assets/logo.png">-->
+    <div class="ui grid">
+      <div class="three wide column" style="background:#444"></div>
+      <div class="one wide column" style="background:#fff"></div>
+      <div class="eleven wide column" style="background:#fafafa">
+        <customer-list v-bind:customers="customers"></customer-list>
+      </div>
+      <div class="one wide column" style="background:#fff"></div>
+    </div>
     <!--<router-view/>-->
   </div>
 </template>
